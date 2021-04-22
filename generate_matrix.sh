@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu -o pipefail
+set -eux -o pipefail
 
 CHANGED_DIRS=$(git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}" '*Dockerfile' '*go.mod' | xargs -I {} dirname {} | uniq)
 
