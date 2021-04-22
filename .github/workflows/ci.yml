@@ -1,4 +1,5 @@
 name: Build containers
+
 on:
   push:
     branches:
@@ -27,11 +28,11 @@ jobs:
         run: ./generate_matrix.py
 
   build_containers:
-    if: needs.metadata.outputs.continue == 'yes'
+    if: needs.build_test_matrix.outputs.continue == 'yes'
     needs: metadata
     runs-on: ubuntu-20.04
     strategy:
-      matrix: ${{ fromJson(needs.metadata.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.build_test_matrix.outputs.matrix) }}
     steps:
 
       - name: Checkout
