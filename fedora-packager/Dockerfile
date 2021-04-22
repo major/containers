@@ -5,3 +5,4 @@ RUN /build.sh
 RUN rm -vf /build.sh
 
 LABEL maintainer="Major Hayden <major@mhtx.net>"
+LABEL source="https://github.com/major/containers"

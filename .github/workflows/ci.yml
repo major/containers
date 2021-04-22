@@ -44,11 +44,9 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v2.3.0
         with:
           images: quay.io/major/${{ matrix.project }}
-          tag-latest: false
-          tag-custom: |
+          tags: |
             ${{ matrix.version }}
-          tag-custom-only: true
-          label-custom: |
+          labels: |
             org.opencontainers.image.version=${{ matrix.version }}
       - name: build
         run: |
