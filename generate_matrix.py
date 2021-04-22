@@ -29,7 +29,7 @@ if not changed_dirs:
 
 output_json = json.dumps(
     {
-        "projects": changed_dirs
+        "includes": {"project": changed_dirs}
     }
 )
 
