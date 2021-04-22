@@ -8,6 +8,7 @@ on:
 
 jobs:
   prepare:
+    name: "👷‍♂️"
     runs-on: ubuntu-20.04
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
@@ -27,7 +28,8 @@ jobs:
         id: generate-matrix
         run: ./generate_matrix.py
 
-  "📦":
+  build:
+    name: "📦"
     if: needs.prepare.outputs.continue == 'yes'
     needs: prepare
     runs-on: ubuntu-20.04
