@@ -1,4 +1,4 @@
-FROM --platform=${BUILDPLATFORM:-linux/amd64} registry.fedoraproject.org/fedora:34
+FROM --platform=${BUILDPLATFORM:-linux/amd64} registry.fedoraproject.org/fedora:latest
 
 COPY /build.sh /
 RUN /build.sh
