@@ -34,6 +34,11 @@ jobs:
     strategy:
       matrix: ${{ fromJson(needs.build_test_matrix.outputs.matrix) }}
     steps:
+      - name: Doot
+        run: echo ${{ matrix.project }}
+
+      - name: Doot
+        run: echo ${{ matrix.projects }}
 
       - name: Checkout
         uses: actions/checkout@v2
