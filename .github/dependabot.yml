@@ -4,6 +4,10 @@ updates:
     directory: "/fedora-packager"
     schedule:
       interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/ta-lib"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
