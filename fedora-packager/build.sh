@@ -3,7 +3,7 @@ set -euxo pipefail
 
 # Install required packages and clean up.
 dnf -y upgrade
-dnf -y install "@Fedora Packager" pyp2rpm rpmdevtools vim
+dnf -y install "@Development Tools" "@Fedora Packager" libffi-devel pyp2rpm rpmdevtools vim
 dnf clean all
 
 # Allow kerberos to work from within a container.
