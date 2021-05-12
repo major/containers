@@ -56,7 +56,7 @@ jobs:
 
       - name: Build only
         if: github.event_name == 'pull_request'
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v2.4.0
         with:
           context: ${{ matrix.project }}
           file: ${{ matrix.project }}/Dockerfile
@@ -68,7 +68,7 @@ jobs:
 
       - name: Build and Push
         if: github.event_name != 'pull_request'
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v2.4.0
         with:
           context: ${{ matrix.project }}
           file: ${{ matrix.project }}/Dockerfile
