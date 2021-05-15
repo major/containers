@@ -7,4 +7,4 @@ RUN rm -vf /build.sh
 LABEL maintainer="Major Hayden <major@mhtx.net>"
 LABEL source="https://github.com/major/containers"
 
-CMD ['/sbin/init']
+CMD ["/sbin/init"]
