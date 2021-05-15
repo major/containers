@@ -9,8 +9,8 @@ mkdir -vp /etc/selinux
 touch /etc/selinux/config
 
 # Install required packages and clean up.
-dnf -y upgrade
-dnf -y install composer-cli osbuild-composer
+dnf -qy upgrade
+dnf -qy install composer-cli osbuild-composer
 dnf clean all
 
 # Start composer at boot.
