@@ -9,7 +9,7 @@ on:
 jobs:
   prepare:
     name: "👷‍♂️"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
       continue: ${{ steps.generate-matrix.outputs.continue }}
@@ -32,7 +32,7 @@ jobs:
     name: "📦"
     if: needs.prepare.outputs.continue == 'yes'
     needs: prepare
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     steps:
